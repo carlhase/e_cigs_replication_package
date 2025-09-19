@@ -4,7 +4,7 @@ This repository contains the preliminary replication package for the working pap
 **Enforcement Spillovers in Product Markets: Evidence from E-cigarettes**.  
 
 ## Contents
-- `scripts/cleaning_and_prep/` — Python (`.py`) and Stata (`.do`) scripts for data cleaning and preparation, and econometric analysis.
+- `scripts/cleaning_and_prep/` — Python (`.py`) and Stata (`.do`) scripts for data cleaning and preparation.
 - `scripts/analysis` — Python (`.py`) and Stata (`.do`) scripts for summary statistics and econometric analysis. The scripts generate all tables and figures in the paper.
 - `output/` — Placeholder only. For regression output, tables, and figures.
 - `data/` — Placeholder only (see [`data/README.md`](data/README.md) for instructions on how to obtain raw data).  

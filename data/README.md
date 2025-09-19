@@ -9,11 +9,11 @@ This folder is a placeholder. The replication package does **not** include raw d
 
 ## How to Access the Data
 This analysis uses different sources of data.
-- PDI Technologies scanner data: Researchers can request access to the scanner data from Dewey at https://www.deweydata.io/
-- Local Area Unemployment Statistics (LAUS): county-level unemployment data from US Census Bureau used to construct a control variable. The data are freely available at https://www.bls.gov/data/
-- FHFA House Price Indexes: quarterly house price indexes at the three-digit zip code level in the United States. Used as a control variable. The data are freely available at https://www.fhfa.gov/hpi
-- Quarterly Census of Employment and Wages (QCEW): County-level quarterly average wage data. The data are freely available at https://www.bls.gov/cew/
-- Tobacco Compliance Check Outcomes: ddata from the FDA on the universe of tobacco inspections at brick and mortar retailers. The data are freely available at https://timp-ccid.fda.gov/
+- **PDI Technologies scanner data**: Researchers can request access to the scanner data from Dewey at https://www.deweydata.io/
+- **Local Area Unemployment Statistics (LAUS)**: county-level unemployment data from US Census Bureau used to construct a control variable. The data are freely available at https://www.bls.gov/data/
+- **FHFA House Price Indexes**: quarterly house price indexes at the three-digit zip code level in the United States. Used as a control variable. The data are freely available at https://www.fhfa.gov/hpi
+- **Quarterly Census of Employment and Wages (QCEW)**: County-level quarterly average wage data. The data are freely available at https://www.bls.gov/cew/
+- **Tobacco Compliance Check Outcomes**: ddata from the FDA on the universe of tobacco inspections at brick and mortar retailers. The data are freely available at https://timp-ccid.fda.gov/
 
 ## Workflow
 Once the appropriate raw data files are placed into this `data/raw_data` folder, the scripts in `scripts/` can be run to:

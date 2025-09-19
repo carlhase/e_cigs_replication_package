@@ -1,26 +1,11 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Dec 10 18:43:24 2024
-
-@author: cahase
-"""
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Mar  1 11:09:07 2024
-
-@author: cahase
-"""
-
 #import deweydatapy as ddp
-import numpy as np
 import pandas as pd
 import glob
 import os
 import gc
 from timeit import default_timer as timer
-import pyarrow as pa
-from pyarrow import csv
 import time
+
 """
 This script reads in 10 csv.gz files at once. For a given store, it collects data 
 for that store from across the 10 datasets and combines them into a single store-level dataframe.

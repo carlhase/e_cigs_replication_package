@@ -5,14 +5,9 @@ Created on Sat Mar  2 11:44:09 2024
 @author: cahase
 """
 
-import numpy as np
 import pandas as pd
-import glob
 import os
-import gc
-from timeit import default_timer as timer
 import pyarrow as pa
-from pyarrow import csv
 
 
 """

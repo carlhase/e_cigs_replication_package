@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Sep 19 16:29:58 2025
-
-@author: cahase
-"""
-
 # Analysis Scripts
 
 These scripts reproduce the paper’s descriptive statistics, main regression results, heterogeneity analyses, robustness checks, and figures.

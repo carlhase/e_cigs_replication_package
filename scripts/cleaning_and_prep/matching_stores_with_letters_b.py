@@ -24,11 +24,6 @@ processed_path = 'G:/My Drive/GSEFM/Research/e_cigarettes/data/processed_data/LS
 # Ensure the destination directory exists
 os.makedirs(processed_path, exist_ok=True)
 
-
-#stores_old = pd.read_csv(store_path + 'Convenience_Retail_Store_Information-0.csv')
-#stores = pd.read_csv(store_path + 'PDI_Stores-01.csv')
-#store_status = pd.read_csv(store_path + 'Convenience_Retail_Store_Status-0.csv')
-
 stores = pd.read_csv("D:/convenience_store/data/raw/LS_Otter/STORE_STATUS NEW/STORE_STATUS_NEW-0.csv", dtype = {'ZIP_CODE': 'str'}) # important to specify dtype = str, otherwise leading zeros will be dropped
 
 stores_cols = list(stores)

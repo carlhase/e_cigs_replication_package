@@ -167,7 +167,7 @@ compare['address_fda'] = compare['address_fda'].str.lower()
 compare_backup = compare.copy()
 #compare = compare_backup.copy()
 
-# --- 1) Replacement map (literal keys; no regex escapes here) ---
+# --- Replacement map 
 replacements = {
     'road': 'rd',
     'street': 'st',
@@ -201,7 +201,7 @@ replacements = {
     'st.': 'st',  # treat as "street"
 }
 
-# --- 2) Helpers to build and apply the pattern ---
+# --- Helpers to build and apply the pattern 
 def _build_main_pattern(keys):
     """Compile an alternation of keys, longest-first, with lookarounds to avoid partial-word hits."""
     keys = sorted(keys, key=len, reverse=True)
@@ -219,7 +219,7 @@ def normalize_address_series(s, repl_map):
     # Lowercase + simple punctuation/spacing harmonization
     out = (
         s.str.lower()
-         .str.replace("-", " ", regex=False)          # turn hyphens into spaces
+         .str.replace("-", " ", regex=False)          
          .str.replace(r"\s+", " ", regex=True)        # squeeze whitespace
          .str.strip()
     )
@@ -233,30 +233,15 @@ def normalize_address_series(s, repl_map):
         lambda m: repl_map.get(m.group(0).lower(), m.group(0)),
         regex=True,
     )
-    # Optional: squeeze whitespace again (just in case)
+    # squeeze whitespace again (just in case)
     out = out.str.replace(r"\s+", " ", regex=True).str.strip()
     return out
 
-# --- 3) Apply to your data ---
+# --- Apply to the data 
 # assumes `compare['address_fda']` and `compare['address_pdi']` already exist
 compare['address_fda'] = normalize_address_series(compare['address_fda'], replacements)
 compare['address_pdi'] = normalize_address_series(compare['address_pdi'], replacements)
 
-
-# # Replace using str.replace with regex=True
-# compare['address_fda'] = compare['address_fda'].str.replace(
-#     r'(?i)\b(?:' + '|'.join(re.escape(k) for k in replacements.keys()) + r')\b',  # Escape special characters
-#     lambda match: replacements.get(match.group(0).lower(), match.group(0)),  # Avoid KeyError
-#     regex=True
-# )
-
-
-# # Replace using str.replace with regex=True
-# compare['address_pdi'] = compare['address_pdi'].str.replace(
-#     r'(?i)\b(?:' + '|'.join(re.escape(k) for k in replacements.keys()) + r')\b',  # Escape special characters
-#     lambda match: replacements.get(match.group(0).lower(), match.group(0)),  # Avoid KeyError
-#     regex=True
-# )
 
 #%%
 # Function to extract house number

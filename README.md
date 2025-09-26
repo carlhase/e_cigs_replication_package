@@ -12,7 +12,7 @@ This repository contains the preliminary replication package for the working pap
 
 ## Highlights
 - End-to-end reproducible workflow: raw → cleaned → analysis → tables/figures.
-- Mix of **Python (pandas)** for data wrangling and **Stata** for econometric analysis.
+- Mix of **Python** for data wrangling and **Stata** for econometric analysis.
 - Code reproduces all tables and figures in the working paper.
 
 ## Paper
